@@ -7,7 +7,7 @@
     --color-terciaria: #22D4FD;
     --color-hover: #272727;
 
-    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif; /* texto en gral */
     --fuente-montserrat: 'Montserrat', sans-serif;
 }
 
@@ -28,6 +28,11 @@ body{
 
 .hidden{
     display: none !important;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-secundaria);
 }
 /* ---------  Fin General --------- */
 
@@ -168,7 +173,8 @@ body{
 }
 
 .presentacion__contenido__carruseles__slider-section img {
-    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
     height: 100%;
     /* object-fit: cover; */
     border-radius: 15px;
@@ -180,6 +186,7 @@ body{
     font-size: 1.2rem;
     font-weight: 400;
     align-self: center;
+    text-align: justify;
 
 }
 .title{
@@ -222,6 +229,19 @@ body{
     right: 10px;
 }
 /* Fin sección Proyectos*/
+
+/* Inicio seccion habilidades */
+.habilidades{
+    align-items: flex-start;
+}
+
+.habilidades__contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+/* Fin seccion habilidades */
 
 /* -----------  Fin Main ----------- */
 
