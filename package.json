@@ -3,5 +3,23 @@
     "express": "^4.19.2",
     "morgan": "^1.10.0",
     "puppeteer": "^22.12.1"
-  }
+  },
+  "name": "portafolio-personal",
+  "version": "1.0.0",
+  "description": "Portafolio web personal, Matias Da Silva",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maybe9999/Portafolio-personal.git"
+  },
+  "author": "Matias Da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maybe9999/Portafolio-personal/issues"
+  },
+  "homepage": "https://github.com/maybe9999/Portafolio-personal#readme"
 }
