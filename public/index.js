@@ -71,9 +71,50 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-    const contenidoSlider = document.getElementsByClassName("presentacion__contenido__carruseles")[1];
+    console.log("se cargo el Dom de proyectos");
+    const contenidoSlider = document.getElementsByClassName("presentacion__contenido__carruseles__slider-section");
+    let contenidoSliderActivo; //Almacena el index de la lista donde esta el slide activo
 
-    console.log("cont slider:",contenidoSlider);
+    function actualizarSliderActivo() { //Obtiene el slider activo o visible
+        for (let bucle = 0; bucle < contenidoSlider.length ; bucle++) {
+            if (!contenidoSlider[bucle].classList.contains("hidden")) {
+                contenidoSliderActivo = bucle;
+                break; // Añadido para detener el bucle una vez se encuentra el activo
+            }
+        }
+    }
+
+    function moverALaIzquierda() {
+        contenidoSlider[contenidoSliderActivo].classList.add("hidden");
+        if (contenidoSliderActivo === 0) {
+            contenidoSlider[contenidoSlider.length - 1].classList.remove("hidden");
+            contenidoSliderActivo = contenidoSlider.length - 1; // Añadido para actualizar el slider activo
+        } else {
+            contenidoSlider[contenidoSliderActivo - 1].classList.remove("hidden");
+            contenidoSliderActivo -= 1; // Añadido para actualizar el slider activo
+        }
+    }
+
+    function moverALaDerecha() {
+        contenidoSlider[contenidoSliderActivo].classList.add("hidden");
+        if (contenidoSliderActivo === (contenidoSlider.length - 1)) { // Corregido para usar length - 1
+            contenidoSlider[0].classList.remove("hidden");
+            contenidoSliderActivo = 0; // Añadido para actualizar el slider activo
+        } else {
+            contenidoSlider[contenidoSliderActivo + 1].classList.remove("hidden");
+            contenidoSliderActivo += 1; // Añadido para actualizar el slider activo
+        }
+    }
+
+    actualizarSliderActivo();
+
+    document.getElementsByClassName("btn-left")[0].addEventListener("click", moverALaIzquierda);
+    document.getElementsByClassName("btn-right")[0].addEventListener("click", moverALaDerecha);
+
+});
+    
+
+
 
 
     /* children
@@ -160,4 +201,3 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }   
     // Fin slider proyectos */
-})
