@@ -17,12 +17,13 @@
 }
 
 body{
+    min-height: 100vh;
     box-sizing: border-box;
     background-color: var(--color-primaria);
     color: var(--color-secundaria);
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-between;
 }
 /* ---------  Fin General --------- */
 
@@ -63,23 +64,8 @@ body{
     justify-content: space-between;
 }
 
-.presentacion__proyectos{
-    padding: 1% 0%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .presentacion__contenido{
     width: 50%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.presentacion__contenido__proyectos{
-    width: 100%;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -118,19 +104,19 @@ body{
     font-size: 1.5rem;
 }
 .presentacion__enlaces__link{
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      border: 2px solid var(--color-terciaria);
-      width: 50%;
-      text-align: center;
-      border-radius: 8px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      padding: 21.5px 0;
-      text-decoration: none;
-      color: var(--color-secundaria);
-      font-family: var(--fuente-montserrat);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--color-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color-secundaria);
+    font-family: var(--fuente-montserrat);
 }
 
 .presentacion__enlaces__link:hover{
@@ -143,22 +129,60 @@ body{
 }
 
 /* Sección Proyectos*/
+.presentacion__proyectos{
+    padding: 1% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.presentacion__contenido__proyectos{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 .presentacion__contenido__carruseles {
-    width: 300vw;
+    width: 100%;
     height: 20vw;
     display: flex;
+    flex-direction: row;
+    padding: 0% 15%;
 }
 
 .presentacion__contenido__carruseles__slider-section{
-    width: calc(100% / 10);
+    width: 65%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:4%;
 }
 
 .presentacion__contenido__carruseles__slider-section img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+}
+
+.presentacion__contenido__proyecto__slider__parrafo{
+    width: 50%;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.2rem;
+    font-weight: 400;
+    align-self: center;
+
+}
+.title{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+.subtitle{
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .btn-left,

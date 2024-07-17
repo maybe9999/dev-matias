@@ -71,7 +71,47 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Inicio slider proyectos
+    const contenidoSlider = document.getElementsByClassName("presentacion__contenido__carruseles")[1];
+
+    console.log("cont slider:",contenidoSlider);
+
+
+    /* children
+        : 
+        HTMLCollection(2)
+        0
+        : 
+        section.presentacion__contenido__carruseles__slider-section
+        1
+        : 
+        section.presentacion__contenido__carruseles__slider-section
+        length:2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* // Inicio slider proyectos
     const btnLeft = document.querySelector(".btn-left");
     const btnRight = document.querySelector(".btn-right");
     const slider = document.querySelector("#slider");
@@ -119,5 +159,5 @@ document.addEventListener("DOMContentLoaded", () => {
         
         
     }   
-    // Fin slider proyectos
+    // Fin slider proyectos */
 })
