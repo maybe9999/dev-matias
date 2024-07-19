@@ -230,7 +230,7 @@ a{
 }
 /* Fin sección Proyectos*/
 
-/* Inicio seccion habilidades */
+/* Inicio sección habilidades */
 .habilidades{
     align-items: flex-start;
     gap:8%;
@@ -292,6 +292,19 @@ a{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
                 0 0 20px rgba(255, 255, 255, 0.342),
                 0 0 30px rgba(255, 255, 255, 0.178);
+}
+
+.presentacion__contenido__texto__hb{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.hb__parrafo{
+    padding: 4% 6%;
+    font-family: var(--fuente-krona);
 }
 
 .html{
