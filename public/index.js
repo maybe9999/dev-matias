@@ -135,3 +135,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    const menu = document.querySelector(".menu__hamburguesa");
+    const itemsMenu = document.querySelector(".header__menu");
+    const cierraMenu = document.querySelector(".cierra__menu");
+    
+    //Open menu
+    menu.addEventListener("click", ()=>{
+        menu.style.display = "none";
+        itemsMenu.style.display = "flex";
+        cierraMenu.style.display = "flex";
+    })
+
+    //Close menu
+    cierraMenu.addEventListener("click", () =>{
+        menu.style.display = "flex";
+        itemsMenu.style.display = "none";
+        cierraMenu.style.display = "none";
+    })
+
+})
