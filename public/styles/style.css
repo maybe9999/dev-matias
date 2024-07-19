@@ -3,8 +3,8 @@
 /* -----------  General ----------- */
 :root {
     --color-primaria: #000000;
-    --color-secundaria: #F6F6F6;
-    --color-terciaria: #22D4FD;
+    --color-secundaria: 246, 246, 246; /* Blanco */
+    --color-terciaria: 34, 212, 253; /* Celeste */
     --color-hover: #272727;
 
     --fuente-krona: 'Krona One', sans-serif; /* texto en gral */
@@ -20,7 +20,7 @@ body{
     min-height: 100vh;
     box-sizing: border-box;
     background-color: var(--color-primaria);
-    color: var(--color-secundaria);
+    color: rgba(var(--color-secundaria));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,7 +32,7 @@ body{
 
 a{
     text-decoration: none;
-    color: var(--color-secundaria);
+    color: rgba(var(--color-secundaria));
 }
 /* ---------  Fin General --------- */
 
@@ -53,7 +53,7 @@ a{
     font-family: var(--fuente-montserrat);
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--color-terciaria);
+    color: rgba(var(--color-terciaria));
     text-decoration: none;
 
 }
@@ -91,7 +91,7 @@ a{
 }
 
 .titulo-destaque {
-    color: var(--color-terciaria); ;
+    color: rgba(var(--color-terciaria));
 }
 
 .presentacion__contenido__texto{
@@ -116,7 +116,7 @@ a{
     display: flex;
     justify-content: center;
     gap: 16px;
-    border: 2px solid var(--color-terciaria);
+    border: 2px solid rgba(var(--color-terciaria));
     width: 50%;
     text-align: center;
     border-radius: 8px;
@@ -124,7 +124,7 @@ a{
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
-    color: var(--color-secundaria);
+    color: rgba(var(--color-secundaria));
     font-family: var(--fuente-montserrat);
 }
 
@@ -247,42 +247,91 @@ a{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    row-gap: 2vw;
+    column-gap: 3vw;
     max-width: 100%;
 }
 
-.presentacion__contenido__box__texto > img{
+.contenedor__ico{
+    border-radius: 50%;
+    
+    padding: 1%;
     width: 3vw;
     height: 3vw;
-    margin: 1vw;
-    padding: 1%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    background-color: var(--color-secundaria);
-    border:0;
 }
 
+.presentacion__contenido__box__texto__img{
+    width: 80%;
+    height: 80%;
 
-.h1{
-    background-color: var(--color-terciaria);
-    backdrop-filter: opacity(70%);
-    color: var(--color-primaria);
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.h2{
-    background-color: var(--color-terciaria);
-    backdrop-filter: opacity(50%);
-    color: var(--color-primaria);
+.texto__etiqueta{
+    position: absolute;
+    background-color: rgba(39, 122, 122, 0.452);
+    bottom: -40%;
+    color: white;
+    font-family: var(--fuente-krona);
+    padding: 5%;
+    backdrop-filter: blur(15px);
 }
 
-.h3{
-    background-color: var(--color-terciaria);
-    backdrop-filter: opacity(30%);
-    color: var(--color-primaria);
+.contenedor__ico:hover{
+    filter: brightness(125%);
+    opacity: 90%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.342),
+                0 0 30px rgba(255, 255, 255, 0.178);
+}
+
+.html{
+    background-color: rgb(227, 79, 38, 0.8);
+}
+.css{
+    background-color: rgb(21, 114, 182, 0.8);
+}
+.js{
+    background-color: rgb(247, 223, 30, 0.8);
+}
+.py{
+    background-color: rgb(55, 118, 171, 0.8);
+}
+.ex{
+    background-color: white;
+}
+.node{
+    background-color: #5FA04E;
+}
+.msql{
+    background-color: #4479A1;
+}
+.npm{
+    background-color: #CB3837;
+}
+.git{
+    background-color: #F05032;
+}
+.github{
+    background-color: #b8b3b3;
+}
+.vercel{
+    background-color: white;
+}
+.postman{
+    background-color: #FF6C37;
+}
+.stackoverflow{
+    background-color: #F58025;
 }
 /* Fin seccion habilidades */
 
@@ -292,7 +341,7 @@ a{
 /* -----------  Inicio Footer ----------- */
 .footer{
     color:var(--color-primaria);
-    background-color: var(--color-terciaria);
+    background-color: rgba(var(--color-terciaria));
     padding: 24px;
     text-align: center;
     font-family: var(--fuente-krona);

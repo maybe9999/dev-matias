@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fin Obtener colores random
 })
 
+
+//SLIDER PROYECTOS...
 document.addEventListener("DOMContentLoaded", () => {
     console.log("se cargo el Dom de proyectos");
     const contenidoSlider = document.getElementsByClassName("presentacion__contenido__carruseles__slider-section");
@@ -115,89 +117,21 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
 
+//HABILIDADES. TEXTO ICO
+document.addEventListener("DOMContentLoaded", () => {
+    const contenedores = document.querySelectorAll(".contenedor__ico");
 
+    contenedores.forEach(contenedor => {
+        const textoEtiqueta = contenedor.querySelector(".texto__etiqueta");
 
-    /* children
-        : 
-        HTMLCollection(2)
-        0
-        : 
-        section.presentacion__contenido__carruseles__slider-section
-        1
-        : 
-        section.presentacion__contenido__carruseles__slider-section
-        length:2 */
+        contenedor.addEventListener("mouseout", () => {
+            console.log("mouse fuera");
+            textoEtiqueta.classList.add("hidden");
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* // Inicio slider proyectos
-    const btnLeft = document.querySelector(".btn-left");
-    const btnRight = document.querySelector(".btn-right");
-    const slider = document.querySelector("#slider");
-    const sliderSection = document.querySelectorAll(".slider-section");
-
-    let operacion = 0;
-    let counter = 0;
-    let widthImg = 100 / sliderSection.length;
-
-    btnLeft.addEventListener("click", e => moveToLeft())
-    btnRight.addEventListener("click", e => moveToRight())
-
-    setInterval(() => {
-        moveToRight()
-    }, 3000);
-
-
-    function moveToRight() {
-        if (counter >= sliderSection.length-1) {
-            counter = 0;
-            operacion = 0;
-            slider.style.transform = `translate(-${operacion}%)`;
-            slider.style.transition = "none";
-            return;
-        } 
-        counter++;
-        operacion = operacion + widthImg;
-        slider.style.transform = `translate(-${operacion}%)`;
-        slider.style.transition = "all ease .6s"
-        
-    }  
-
-    function moveToLeft() {
-        counter--;
-        if (counter < 0 ) {
-            counter = sliderSection.length-1;
-            operacion = widthImg * (sliderSection.length-1)
-            slider.style.transform = `translate(-${operacion}%)`;
-            slider.style.transition = "none";
-            return;
-        } 
-        operacion = operacion - widthImg;
-        slider.style.transform = `translate(-${operacion}%)`;
-        slider.style.transition = "all ease .6s"
-        
-        
-    }   
-    // Fin slider proyectos */
+        contenedor.addEventListener("mouseover", () => {
+            console.log("mouse dentro");
+            textoEtiqueta.classList.remove("hidden");
+        });
+    });
+});
