@@ -406,6 +406,10 @@ a{
         flex-direction: row-reverse;
     }
     
+    .presentacion{
+        flex-direction: column-reverse;
+    }
+
     .header__menu{
         background-color: rgba(0, 0, 0, 0.96);
         display: none;
