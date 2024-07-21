@@ -423,6 +423,15 @@ a{
         gap: 0px;
     }
 
+    .presentacion__contenido__box__texto{
+        row-gap: 4vw;
+    }
+
+    .texto__etiqueta{
+        bottom: -60%;
+        font-size: 1rem;
+    }
+
     .presentacion__contenido__carruseles__slider-section{
         flex-direction: column;
         width: 100%;
@@ -475,7 +484,7 @@ a{
     .cierra__menu{
         position: absolute;
         width: 10vw;
-        background-color: white;
+
     }
 
     .menu__hamburguesa{
@@ -495,9 +504,16 @@ a{
 
     .presentacion__contenido__carruseles{
         height: auto;
-        
     }
 
+    .presentacion__contenido__box__texto {
+        row-gap: 5vw;
+    }
+
+    .texto__etiqueta{
+        bottom: -55%;
+        font-size: 0.8rem;
+    }
 
     .btn-left, .btn-right {
         top: auto;

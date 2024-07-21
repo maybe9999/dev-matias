@@ -1,3 +1,4 @@
+// --- GENERAL ---
 document.addEventListener("DOMContentLoaded", () => {
     // Obtener colores random
     console.log("se cargo el dom");
@@ -71,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-//SLIDER PROYECTOS...
-document.addEventListener("DOMContentLoaded", () => {
+//--- PROYECTOS... ---
+document.addEventListener("proyectosLoaded", () => {
     console.log("se cargo el Dom de proyectos");
     const contenidoSlider = document.getElementsByClassName("presentacion__contenido__carruseles__slider-section");
     let contenidoSliderActivo; //Almacena el index de la lista donde esta el slide activo
@@ -110,15 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     actualizarSliderActivo();
 
-    document.getElementsByClassName("btn-left")[0].addEventListener("click", moverALaIzquierda);
-    document.getElementsByClassName("btn-right")[0].addEventListener("click", moverALaDerecha);
+    document.querySelector(".btn-left").addEventListener("click", moverALaIzquierda);
+    document.querySelector(".btn-right").addEventListener("click", moverALaDerecha);
 
 });
     
 
 
 //HABILIDADES. TEXTO ICO
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("habilidadesLoaded", () => {
     const contenedores = document.querySelectorAll(".contenedor__ico");
 
     contenedores.forEach(contenedor => {
@@ -136,6 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+// ---  GENERAL !!! ---
 document.addEventListener("DOMContentLoaded", ()=>{
     const menu = document.querySelector(".menu__hamburguesa");
     const itemsMenu = document.querySelector(".header__menu");
@@ -156,3 +159,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log(window.location.pathname.split("/").slice(-1)[0]);
+    if (window.location.pathname.split("/").slice(-1)[0] === 'proyectos.html') {
+        document.dispatchEvent(new Event('proyectosLoaded'));
+        console.log("js de proyecto cargado");
+    } else if (window.location.pathname.split("/").slice(-1)[0] === 'habilidades.html') {
+        document.dispatchEvent(new Event('habilidadesLoaded'));
+        console.log("js de habilidades cargado");
+    }
+});
