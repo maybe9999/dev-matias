@@ -177,7 +177,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
 
-    gap:4%;
+    gap:40px;
 }
 
 .presentacion__contenido__carruseles__slider-section img {
@@ -194,8 +194,7 @@ a{
     font-size: 1.2rem;
     font-weight: 400;
     align-self: center;
-    text-align: justify;
-
+    word-wrap: break-word;
 }
 .title{
     font-size: 2.4rem;
@@ -303,7 +302,7 @@ a{
 
 .contenedor__ico:hover{
     filter: brightness(125%);
-    opacity: 90%;
+    opacity: 1000%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
                 0 0 20px rgba(255, 255, 255, 0.342),
                 0 0 30px rgba(255, 255, 255, 0.178);
@@ -335,31 +334,31 @@ a{
     background-color: rgb(55, 118, 171, 0.8);
 }
 .ex{
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.8);
 }
 .node{
-    background-color: #5FA04E;
+    background-color: rgb(95, 160, 78, 0.8);
 }
 .msql{
-    background-color: #4479A1;
+    background-color: rgb(68, 121, 161, 0.8);
 }
 .npm{
-    background-color: #CB3837;
+    background-color: rgb(203, 56, 55, 0.8);
 }
 .git{
-    background-color: #F05032;
+    background-color: rgb(240, 80, 50, 0.8);
 }
 .github{
-    background-color: #b8b3b3;
+    background-color: rgb(184, 179, 179, 0.8);
 }
 .vercel{
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.8);
 }
 .postman{
-    background-color: #FF6C37;
+    background-color: rgb(255, 108, 55, 0.8);
 }
 .stackoverflow{
-    background-color: #F58025;
+    background-color: rgb(245, 128, 37, 0.8);
 }
 /* Fin seccion habilidades */
 
@@ -375,28 +374,73 @@ a{
     font-family: var(--fuente-krona);
     font-size: 1.5rem;
     font-weight: 400;
+    margin-top: 5%;
 }
 /* -----------  Fin Footer ----------- */
 
 
 /* -------------------- Media Querys --------------------*/
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
 
     .header{
-         padding: 10%;  
+        padding: 3% 5% 3% 10%;  
     }
     .header__menu{
         justify-content: center;
     }
-    .presentacion{
-        flex-direction: row;
-        padding: 5%;
+
+    .habilidades{
+        gap:40px;
     }
 
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 0% 10%;
+    }
+
+    .presentacion__proyectos{
+        flex-direction: column-reverse;
+        padding: 0% 5%;
+    }
+
+    .proyectos__contenido__titulo {
+        padding: 3% 5%;
+    }
     .presentacion__contenido{
         width: auto;
     }
-    
+
+    .presentacion__contenido__hb{
+        width: 100%;
+    }
+
+    .presentacion__contenido__carruseles{
+        height: auto;
+        padding: 5%;
+    }
+
+    .presentacion__contenido__proyectos{
+        gap: 0px;
+    }
+
+    .presentacion__contenido__carruseles__slider-section{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .presentacion__contenido__carruseles__slider-section img {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .presentacion__contenido__proyecto__slider__parrafo{
+        width: 100%;
+    }
+
+    .contenedor__ico{
+        width: 4vw;
+        height: 4vw;
+    }
 }
 
 @media (max-width: 768px){
@@ -406,8 +450,9 @@ a{
         flex-direction: row-reverse;
     }
     
-    .presentacion{
+    .presentacion, .presentacion__proyectos{
         flex-direction: column-reverse;
+        margin-bottom:10%;
     }
 
     .header__menu{
@@ -444,8 +489,38 @@ a{
         gap: 65px;
     }
 
+    .habilidades{
+        margin-top: 10%;
+    }
+
+    .presentacion__contenido__carruseles{
+        height: auto;
+        
+    }
+
+
+    .btn-left, .btn-right {
+        top: auto;
+        transform: none;
+        margin-top: 33%;
+    }
+
     .presentacion__contenido__hb{
         width: 100%;
+    }
+
+    .presentacion__contenido__carruseles__slider-section{
+        flex-direction: column;
+    }
+
+    .presentacion__contenido__carruseles__slider-section img {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .presentacion__contenido__proyecto__slider__parrafo{
+        width: 100%;
+        
     }
 
     .contenedor__ico{
@@ -455,31 +530,6 @@ a{
     /* Fin Main */
 }
 
-
-/* .header{
-    padding: 0% 15% 0% 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__menu{
-    display: flex;
-    gap: 4vw;
-}
-.header__menu__link{
-    font-family: var(--fuente-montserrat);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: rgba(var(--color-terciaria));
-    text-decoration: none;
-
-}
-
-.dados{
-    width: 100px;
-    height: 100px;
-} */
 @media (max-width: 375px){
 
 }
